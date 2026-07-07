@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Нұршат кешірші ❤️</title>
+
+<style>
+body{
+margin:0;
+font-family:Arial,sans-serif;
+background:pink;
+display:flex;
+justify-content:center;
+align-items:center;
+height:100vh;
+text-align:center;
+}
+
+h1{
+font-size:40px;
+}
+
+p{
+font-size:24px;
+}
+
+button{
+padding:15px 35px;
+font-size:22px;
+border:none;
+border-radius:10px;
+cursor:pointer;
+margin:15px;
+}
+
+#yes{
+background:green;
+color:white;
+}
+
+#no{
+background:red;
+color:white;
+position:absolute;
+}
+</style>
+</head>
+
+<body>
+
+<div>
+<h1>Нұршат, мені кешірші ❤️</h1>
+<p>Кешіресің бе?</p>
+
+<button id="yes" onclick="yes()">Иә</button>
+<button id="no">Жоқ</button>
+
+<h2 id="msg"></h2>
+</div>
+
+<script>
+const no=document.getElementById("no");
+
+no.addEventListener("touchstart",move);
+no.addEventListener("mouseover",move);
+
+function move(){
+no.style.left=Math.random()*(window.innerWidth-100)+"px";
+no.style.top=Math.random()*(window.innerHeight-60)+"px";
+}
+
+function yes(){
+document.getElementById("msg").innerHTML="❤️ Рахмет! ❤️";
+}
+</script>
+
+</body>
+</html>
